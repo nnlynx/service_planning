@@ -1,0 +1,8 @@
+.vscode/
+other/
+./Data/debug.txt
+./Data/test_planning.txt
+./Data/Отклонение пробега
+./Data/Портянка 2022-2023.txt
+./Data/ТО и ТР 2022-2023.txt
+./src/__pycache__
