@@ -37,8 +37,8 @@ from normatives import (
     service_duration_standards
 )
 from parsing import (
-    wagon_data_extra_parser,
-    wagon_data_main_parser
+    convert_start_date,
+    pars_wagons_data
 )
 from planning import (
     service_planning
@@ -66,20 +66,22 @@ from verification import (
     verify_planning_results,
 )
 
-Registry.planning_start_date, raw_wagons_attrs = wagon_data_main_parser(
+raw_start_date, raw_main_wagons_attrs = pars_wagons_data(
     select_main_wagon_data_path())
+
+Registry.planning_start_date = convert_start_date(raw_start_date)
 
 Registry.planning_end_date = select_planning_end_date()
 
 Registry.mileage_standards = mileage_frequency_standards()
 Registry.duration_standards = service_duration_standards()
-wagons_attrs = convert_wagons_attrs(raw_wagons_attrs)
+wagons_attrs = convert_wagons_attrs(raw_main_wagons_attrs)
 
 Registry.wagons = create_wagons(wagons_attrs,
                                 start_date=Registry.planning_start_date,
                                 end_date=Registry.planning_end_date)
 
-update_wagons_attrs(wagon_data_extra_parser(select_extra_wagon_data_path()))
+update_wagons_attrs(pars_wagons_data(select_extra_wagon_data_path()))
 
 hitched_wagons = select_hitched_wagons()
 Registry.train_lenght = calculate_train_lenght(hitched_wagons)
