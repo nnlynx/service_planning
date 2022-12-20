@@ -1,8 +1,21 @@
 .vscode/
 other/
-./Data/debug.txt
-./Data/test_planning.txt
-./Data/Отклонение пробега
-./Data/Портянка 2022-2023.txt
-./Data/ТО и ТР 2022-2023.txt
-./src/__pycache__/
+Data/Отклонение пробега
+Data/Портянка 2022-2023.txt
+Data/ТО и ТР 2022-2023.txt
+Data/debug.txt
+Data/result_services.txt
+Data/test_planning.txt
+src/__pycache__/calculation.cpython-38.pyc
+src/__pycache__/changing.cpython-38.pyc
+src/__pycache__/classes.cpython-38.pyc
+src/__pycache__/confirmation.cpython-38.pyc
+src/__pycache__/conversion.cpython-38.pyc
+src/__pycache__/creation.cpython-38.pyc
+src/__pycache__/definition.cpython-38.pyc
+src/__pycache__/normatives.cpython-38.pyc
+src/__pycache__/parsing.cpython-38.pyc
+src/__pycache__/planning.cpython-38.pyc
+src/__pycache__/selection.cpython-38.pyc
+src/__pycache__/utility.cpython-38.pyc
+src/__pycache__/verification.cpython-38.pyc
